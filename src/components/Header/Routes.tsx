@@ -9,6 +9,10 @@ const siteRoutes = [
         label: "Home",
     },
     {
+        href: "/about",
+        label: "About",
+    },
+    {
         href: "/contributions",
         label: "Contributions",
     },

@@ -15,7 +15,7 @@ const Main = () => {
                         <span className="text-primary"> Prince Allwin</span>
                     </h1>
                     <h1 className="py-2 text-gray-700">
-                        Smart Contract Enginner
+                        Smart Contract Engineer
                     </h1>
                     <p className="text-sm py-4 text-gray-500 sm:max-w-[70%] m-auto">
                         My primary focus is on creating secure and efficient
