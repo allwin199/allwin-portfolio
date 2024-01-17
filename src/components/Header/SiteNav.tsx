@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import Logo from "../../assets/logo.png";
 import Routes from "./Routes";
 import MediaLinks from "./MediaLinks";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
@@ -50,7 +52,14 @@ export default function SiteNav() {
                 >
                     <div className="flex w-full items-center justify-between pb-5">
                         <Link href="/">
-                            <h1 className="text-md text-primary">Allwin</h1>
+                            {/* <h1 className="text-md text-primary">Allwin</h1> */}
+                            <Image
+                                src={Logo}
+                                alt="logo"
+                                unoptimized={false}
+                                width={140}
+                                height={140}
+                            />
                         </Link>
                         <div
                             onClick={handleMobileNav}
