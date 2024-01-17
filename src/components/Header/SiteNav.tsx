@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Routes from "./Routes";
 import MediaLinks from "./MediaLinks";
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 export default function SiteNav() {
     const [mobileNav, setMobileNav] = useState(false);
