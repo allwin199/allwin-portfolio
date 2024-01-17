@@ -1,48 +1,70 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-const siteRoutes = [
-    {
-        href: "/",
-        label: "Home",
-    },
-    {
-        href: "/contributions",
-        label: "Contributions",
-    },
-    {
-        href: "/projects",
-        label: "Projects",
-    },
-    {
-        href: "/contact",
-        label: "Contact",
-    },
-];
+import Routes from "./Routes";
+import MediaLinks from "./MediaLinks";
+import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 
 export default function SiteNav() {
-    const pathname = usePathname();
+    const [mobileNav, setMobileNav] = useState(false);
+
+    const handleMobileNav = () => {
+        setMobileNav(!mobileNav);
+    };
 
     return (
         <nav>
-            <ul className="flex gap-x-5 text-[14px]">
-                {siteRoutes.map((siteRoute) => (
-                    <li key={siteRoute.href}>
-                        <Link
-                            href={siteRoute.href}
-                            className={`text-zinc-400 transition ${
-                                pathname === siteRoute.href
-                                    ? "text-zinc-900"
-                                    : ""
-                            }`}
-                        >
-                            {siteRoute.label}
-                        </Link>
-                    </li>
-                ))}
+            <ul className="hidden md:flex gap-x-5 text-[14px]">
+                <Routes mobile={false} />
             </ul>
+
+            {/* Hamburger Icon */}
+            <div
+                // style={{ color: `${linkColor}` }}
+                onClick={handleMobileNav}
+                className="md:hidden"
+            >
+                <AiOutlineMenu
+                    size={25}
+                    className="text-primary cursor-pointer"
+                />
+            </div>
+
+            {/* Mobile Menu */}
+            {/* Overlay */}
+            <div
+                className={
+                    mobileNav
+                        ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70"
+                        : ""
+                }
+            >
+                {/* Side Drawer Menu */}
+                <div
+                    className={
+                        mobileNav
+                            ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+                            : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+                    }
+                >
+                    <div className="flex w-full items-center justify-between pb-5">
+                        <Link href="/">
+                            <h1 className="text-md text-primary">Allwin</h1>
+                        </Link>
+                        <div
+                            onClick={handleMobileNav}
+                            className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+                        >
+                            <AiOutlineClose />
+                        </div>
+                    </div>
+                    <ul className="py-4 flex flex-col">
+                        <Routes mobile={true} />
+                    </ul>
+                    <MediaLinks />
+                </div>
+            </div>
         </nav>
     );
 }
