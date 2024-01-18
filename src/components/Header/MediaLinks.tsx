@@ -15,7 +15,7 @@ const siteRoutes = [
 const MediaLinks = () => {
     return (
         <div className="pt-4">
-            <p className="text-primary pb-2">princeallwin199@gmail.com</p>
+            {/* <p className="text-primary pb-2">princeallwin199@gmail.com</p> */}
             <div className="flex items-center my-4 w-full sm:w-[80%]">
                 {siteRoutes.map((siteRoute) => (
                     <a

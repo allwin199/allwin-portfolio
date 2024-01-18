@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../assets/logo.png";
 import SiteNav from "./SiteNav";
 
 export default function Header() {
@@ -32,7 +31,7 @@ export default function Header() {
             <div className="flex justify-between items-center w-full h-full px-8 2xl:px-16">
                 <Link href="../">
                     <Image
-                        src={Logo}
+                        src="/logo.png"
                         alt="logo"
                         unoptimized={false}
                         width={140}
