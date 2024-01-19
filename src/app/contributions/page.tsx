@@ -4,7 +4,7 @@ import { MdArrowRight } from "react-icons/md";
 
 const Contributions = () => {
     return (
-        <div className="py-16">
+        <div className="py-16 px-8">
             <div className="mt-24 max-w-[1000px] mx-auto">
                 <p className="uppercase text-xl text-primary mb-6">
                     Contributions

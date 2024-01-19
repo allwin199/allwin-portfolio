@@ -17,9 +17,11 @@ const About = () => {
                 <p className="py-2 text-gray-600">
                     As an active contributor in the web3 space, I have made
                     contributions to both the OpenZeppelin library and the
-                    Foundry framework. Furthermore, I actively participate in
-                    the Foundry course taught by Patrick Collins. More about my
-                    contributions in contributions page.
+                    Foundry framework. Collaborating with fellow developers has
+                    been instrumental in my learning journey. Furthermore, I
+                    actively participate in the Foundry course led by Patrick
+                    Collins, where I engage in answering queries and assisting
+                    others.
                 </p>
                 <p className="pt-2 text-gray-600 mb-6">
                     Beyond my involvement in the web3 domain, I also specialize
