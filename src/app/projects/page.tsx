@@ -16,22 +16,24 @@ const page = () => {
                                 USD.
                             </p>
                             <p className="mt-1 text-sm">
-                                <Link
+                                <a
                                     href="https://github.com/allwin199/fund-me-foundry"
                                     className="text-sm text-primary"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     Github
-                                </Link>
+                                </a>
                             </p>
                             <div className="mt-1 text-sm">
-                                <Link
+                                <a
                                     href="https://sepolia.etherscan.io/address/0x10abe3c914d43b30b42112f98bc680a91d8f389d#code"
                                     className="text-sm text-primary"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     Contract
-                                </Link>{" "}
+                                </a>{" "}
                                 <span className="text-sm text-gray-500">
                                     (Sepolia)
                                 </span>
@@ -76,22 +78,24 @@ const page = () => {
                                 ETH.
                             </p>
                             <p className="mt-1 text-sm">
-                                <Link
+                                <a
                                     href="https://github.com/allwin199/raffle-foundry"
                                     className="text-sm text-primary"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     Github
-                                </Link>
+                                </a>
                             </p>
                             <div className="mt-1 text-sm">
-                                <Link
+                                <a
                                     href="https://sepolia.etherscan.io/address/0xed051837356181f59fc48b0affdd241d4082829f#code"
                                     className="text-sm text-primary"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     Contract
-                                </Link>{" "}
+                                </a>{" "}
                                 <span className="text-sm text-gray-500">
                                     (Sepolia)
                                 </span>

@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Image from "next/Image";
 import { MdArrowRight } from "react-icons/md";
 
 const Contributions = () => {
@@ -9,6 +9,18 @@ const Contributions = () => {
                 <p className="uppercase text-xl text-primary mb-6">
                     Contributions
                 </p>
+                {/* <a
+                    href="https://github.com/allwin199"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <Image
+                        alt="Prince Allwin's GitHub Stats"
+                        src="https://github-readme-stats.vercel.app/api?username=allwin199&hide=stars&bg_color=ecf0f3"
+                        width={350}
+                        height={350}
+                    />
+                </a> */}
                 <div className="mt-10">
                     <p className="text-2xl">Openzeppelin</p>
                     <div>
@@ -17,13 +29,13 @@ const Contributions = () => {
                         </p>
                         <p className="mt-1 text-sm">
                             Id :{" "}
-                            <Link
+                            <a
                                 href="https://github.com/OpenZeppelin/openzeppelin-contracts/pull/4472"
                                 className="text-sm text-primary"
                                 target="_blank"
                             >
                                 #4472
-                            </Link>
+                            </a>
                         </p>
                         <div className="mt-4 text-sm text-gray-600">
                             <ul className="m-0">
