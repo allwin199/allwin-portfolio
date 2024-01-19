@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const About = () => {
     return (
         <div className="py-16 px-8">
@@ -19,16 +21,19 @@ const About = () => {
                     the Foundry course taught by Patrick Collins. More about my
                     contributions in contributions page.
                 </p>
-                <p className="py-2 text-gray-600">
-                    In addition to my contributions to the web3 space, I also
-                    develop full-stack applications to streamline communication
-                    with these smart contracts. My projects encompass a wide
-                    range of functionalities.
+                <p className="pt-2 text-gray-600 mb-6">
+                    Beyond my involvement in the web3 domain, I also specialize
+                    in developing comprehensive full-stack applications. These
+                    applications facilitate seamless interaction with smart
+                    contracts. I leverage NextJs, React Js, and Typescript in
+                    the development process.
                 </p>
-                <ul>
-                    <li className="text-primary">- CrowdFunding</li>
-                    <li className="text-primary">- Raffle</li>
-                </ul>
+                <button className="mr-2">
+                    <Link href="/contributions">Contributions</Link>
+                </button>
+                <button className="ml-2">
+                    <Link href="/projects">Projects</Link>
+                </button>
             </div>
         </div>
     );

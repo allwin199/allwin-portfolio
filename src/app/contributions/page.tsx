@@ -7,6 +7,7 @@ const Contributions = () => {
                 <p className="uppercase text-xl text-primary mb-6">
                     Contributions
                 </p>
+                <div></div>
             </div>
         </div>
     );
