@@ -28,9 +28,10 @@ const siteRoutes = [
 
 type RouteProps = {
     mobile: boolean;
+    handleMobileNav: () => void;
 };
 
-const Routes = ({ mobile }: RouteProps) => {
+const Routes = ({ mobile, handleMobileNav }: RouteProps) => {
     const pathname = usePathname();
     return (
         <>
@@ -38,6 +39,7 @@ const Routes = ({ mobile }: RouteProps) => {
                 <li
                     key={siteRoute.href}
                     className={mobile ? "py-4 text-sm" : ""}
+                    onClick={handleMobileNav}
                 >
                     <Link
                         href={siteRoute.href}

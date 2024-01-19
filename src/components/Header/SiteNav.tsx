@@ -17,7 +17,7 @@ export default function SiteNav() {
     return (
         <nav>
             <ul className="hidden md:flex gap-x-5 text-[14px]">
-                <Routes mobile={false} />
+                <Routes mobile={false} handleMobileNav={handleMobileNav} />
             </ul>
 
             {/* Hamburger Icon */}
@@ -67,7 +67,10 @@ export default function SiteNav() {
                         </div>
                     </div>
                     <ul className="py-4 flex flex-col">
-                        <Routes mobile={true} />
+                        <Routes
+                            mobile={true}
+                            handleMobileNav={handleMobileNav}
+                        />
                     </ul>
                     <MediaLinks />
                 </div>
