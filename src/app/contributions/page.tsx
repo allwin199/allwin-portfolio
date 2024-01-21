@@ -55,13 +55,15 @@ const Contributions = async () => {
                                         />{" "}
                                         {contribution.content2}
                                     </li>
-                                    <li className="py-1 flex">
-                                        <MdArrowRight
-                                            size={20}
-                                            className="text-gray-600"
-                                        />{" "}
-                                        {contribution.content3}
-                                    </li>
+                                    {contribution.content3 ? (
+                                        <li className="py-1 flex">
+                                            <MdArrowRight
+                                                size={20}
+                                                className="text-gray-600"
+                                            />{" "}
+                                            {contribution.content3}
+                                        </li>
+                                    ) : null}
                                 </ul>
                             </div>
                         </div>

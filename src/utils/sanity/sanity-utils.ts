@@ -19,7 +19,7 @@ export const getProjects = () : Promise<Project[]> => {
 }
 
 export const getContributions = () : Promise<Contributions[]> => {
-    
+
     return client.fetch(
         groq`*[_type == "contributions"]{
             _id,
@@ -32,6 +32,6 @@ export const getContributions = () : Promise<Contributions[]> => {
             content1,
             content2,
             content3
-        }`
+        } | order(_createdAt desc)`
     )
 }
