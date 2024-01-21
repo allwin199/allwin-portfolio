@@ -1,8 +1,11 @@
 import React from "react";
-import Image from "next/Image";
+// import Image from "next/Image";
 import { MdArrowRight } from "react-icons/md";
+import { getContributions } from "@/utils/sanity/sanity-utils";
 
-const Contributions = () => {
+const Contributions = async () => {
+    const contributions = await getContributions();
+
     return (
         <div className="py-16 px-8">
             <div className="mt-24 max-w-[1000px] mx-auto">
@@ -21,54 +24,49 @@ const Contributions = () => {
                         height={350}
                     />
                 </a> */}
-                <div className="mt-10">
-                    <p className="text-2xl">Openzeppelin</p>
-                    <div>
-                        <p className="mt-6">
-                            Add internal functions inside modifiers
-                        </p>
-                        <p className="mt-1 text-sm">
-                            Id :{" "}
-                            <a
-                                href="https://github.com/OpenZeppelin/openzeppelin-contracts/pull/4472"
-                                className="text-sm text-primary"
-                                target="_blank"
-                            >
-                                #4472
-                            </a>
-                        </p>
-                        <div className="mt-4 text-sm text-gray-600">
-                            <ul className="m-0">
-                                <li className="py-1 flex">
-                                    <MdArrowRight
-                                        size={20}
-                                        className="text-gray-600"
-                                    />{" "}
-                                    The integration of internal functions within
-                                    modifiers contributes to improved
-                                    readability.
-                                </li>
-                                <li className="py-1 flex">
-                                    <MdArrowRight
-                                        size={20}
-                                        className="text-gray-600"
-                                    />{" "}
-                                    This approach not only reduces gas
-                                    consumption but also improves
-                                    maintainability.
-                                </li>
-                                <li className="py-1 flex">
-                                    <MdArrowRight
-                                        size={20}
-                                        className="text-gray-600"
-                                    />{" "}
-                                    Furthermore, it enhances the overall
-                                    structure and organization of your code.
-                                </li>
-                            </ul>
+                {contributions.map((contribution) => (
+                    <div key={contribution._id} className="mt-10">
+                        <p className="text-2xl">{contribution.organization}</p>
+                        <div>
+                            <p className="mt-4">{contribution.issue}</p>
+                            <p className="mt-1 mb-2 text-sm">
+                                Id :{" "}
+                                <a
+                                    href={contribution.url}
+                                    className="text-sm text-primary"
+                                    target="_blank"
+                                >
+                                    #{contribution.issue_id}
+                                </a>
+                            </p>
+                            <div className="mt-4 text-sm text-gray-600">
+                                <ul className="m-0">
+                                    <li className="py-1 flex">
+                                        <MdArrowRight
+                                            size={20}
+                                            className="text-gray-600"
+                                        />{" "}
+                                        {contribution.content1}
+                                    </li>
+                                    <li className="py-1 flex">
+                                        <MdArrowRight
+                                            size={20}
+                                            className="text-gray-600"
+                                        />{" "}
+                                        {contribution.content2}
+                                    </li>
+                                    <li className="py-1 flex">
+                                        <MdArrowRight
+                                            size={20}
+                                            className="text-gray-600"
+                                        />{" "}
+                                        {contribution.content3}
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
         </div>
     );

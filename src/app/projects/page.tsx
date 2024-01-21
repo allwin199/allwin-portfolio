@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Link from "next/link";
 import { MdArrowRight } from "react-icons/md";
 import { getProjects } from "@/utils/sanity/sanity-utils";
@@ -12,6 +11,7 @@ const page = async () => {
                     <p>{project.name}</p>
                 </div>
             ))} */}
+
             <div className="mt-24 max-w-[1000px] mx-auto">
                 <p className="uppercase text-xl text-primary mb-2">Projects</p>
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
