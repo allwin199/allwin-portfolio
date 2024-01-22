@@ -4,7 +4,6 @@ import Link from "next/link";
 
 const Project = async () => {
     const projects = await getProjects();
-    console.log("projects", projects);
     return (
         <div className="mt-10">
             {projects.map((project) => (
@@ -57,7 +56,7 @@ const Project = async () => {
                             </li>
                         </ul>
                         <button className="mt-4">
-                            <Link href="/">More</Link>
+                            <Link href={`/projects/${project.slug}`}>More</Link>
                         </button>
                     </div>
                 </div>
