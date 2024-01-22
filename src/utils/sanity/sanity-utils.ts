@@ -32,6 +32,6 @@ export const getContributions = () : Promise<Contributions[]> => {
             content1,
             content2,
             content3
-        } | order(_createdAt desc)`
+        } | order(slug asc)`
     )
 }
