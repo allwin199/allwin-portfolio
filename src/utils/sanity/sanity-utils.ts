@@ -20,7 +20,7 @@ export const getProjects = () : Promise<Project[]> => {
             content2,
             content3,
             content
-        }`
+        } | order(slug asc)`
     );
 }
 

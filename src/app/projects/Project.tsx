@@ -5,7 +5,7 @@ import Link from "next/link";
 const Project = async () => {
     const projects = await getProjects();
     return (
-        <div className="mt-10">
+        <div className="mt-10 grid sm:grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => (
                 <div key={project._id}>
                     <p className="text-2xl">{project.project_name}</p>
