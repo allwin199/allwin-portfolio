@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 // import Image from "next/Image";
-import Contribution from "./contribution";
+import Contribution from "./Contribution";
 
 const Contributions = () => {
     return (
