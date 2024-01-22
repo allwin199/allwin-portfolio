@@ -6,13 +6,19 @@ import {Contributions} from "../../../types/Contributions";
 export const getProjects = () : Promise<Project[]> => {
 
     return client.fetch(
-        groq`*[_type == "project"]{
+        groq`*[_type == "works"]{
             _id,
             _createdAt,
-            name,
+            project_name,
             "slug": slug.current,
+            project_desc,
+            github_url,
+            contract_url,
             "image": image.assert->url,
             url,
+            content1,
+            content2,
+            content3,
             content
         }`
     );
