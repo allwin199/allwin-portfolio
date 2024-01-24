@@ -33,12 +33,12 @@ const About = () => {
                     contracts. I leverage NextJs, React Js, and Typescript in
                     the development process.
                 </p>
-                <button className="mr-2">
-                    <Link href="/contributions">Contributions</Link>
-                </button>
-                <button className="ml-2">
-                    <Link href="/projects">Projects</Link>
-                </button>
+                <Link href="/contributions">
+                    <button className="mr-2">Contributions</button>
+                </Link>
+                <Link href="/projects">
+                    <button className="ml-2">Projects</button>
+                </Link>
             </div>
         </div>
     );

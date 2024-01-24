@@ -55,9 +55,10 @@ const Project = async () => {
                                 {project.content3}
                             </li>
                         </ul>
-                        <button className="mt-4">
-                            <Link href={`/projects/${project.slug}`}>More</Link>
-                        </button>
+
+                        <Link href={`/projects/${project.slug}`}>
+                            <button className="mt-4">More</button>
+                        </Link>
                     </div>
                 </div>
             ))}

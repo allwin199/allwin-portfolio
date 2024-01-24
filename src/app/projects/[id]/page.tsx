@@ -1,4 +1,4 @@
-import Project from "./Project";
+import Project from "../../../components/projects/Project-Item";
 
 type Props = {
     params: { id: string };
