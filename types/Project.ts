@@ -10,8 +10,12 @@ export type Project = {
     url: string;
     github_url:string;
     contract_url:string;
+    network: string;
     content1: string;
     content2: string;
     content3: string;
+    content4: string;
+    content5: string;
+    content6: string;
     content: PortableTextBlock[];
 }

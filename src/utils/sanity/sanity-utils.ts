@@ -14,6 +14,7 @@ export const getProjects = () : Promise<Project[]> => {
             project_desc,
             github_url,
             contract_url,
+            network,
             "image": image.assert->url,
             url,
             content1,
@@ -35,11 +36,15 @@ export const getProject = (slug: string) : Promise<Project> => {
             project_desc,
             github_url,
             contract_url,
+            network,
             "image": image.assert->url,
             url,
             content1,
             content2,
             content3,
+            content4,
+            content5,
+            content6,
             content
         }`
         ,{ slug }

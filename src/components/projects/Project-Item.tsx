@@ -16,7 +16,7 @@ const Project = async ({ params }: Props) => {
             <Back />
             <p className="text-2xl">{project.project_name}</p>
             <p className="mt-4">{project.project_desc}</p>
-            <p className="mt-1 text-sm">
+            <div className="mt-1 text-sm">
                 <a
                     href={project.github_url}
                     className="text-sm text-primary"
@@ -25,7 +25,7 @@ const Project = async ({ params }: Props) => {
                 >
                     Github
                 </a>
-            </p>
+            </div>
             <div className="mt-1 text-sm">
                 <a
                     href={project.contract_url}
@@ -35,8 +35,24 @@ const Project = async ({ params }: Props) => {
                 >
                     Contract
                 </a>{" "}
-                <span className="text-sm text-gray-500">(Sepolia)</span>
+                {project.network ? (
+                    <span className="text-sm text-gray-500">
+                        ({project.network})
+                    </span>
+                ) : null}
             </div>
+            {project.url ? (
+                <div className="mt-1 text-sm">
+                    <a
+                        href={project.url}
+                        className="text-sm text-primary"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Demo
+                    </a>
+                </div>
+            ) : null}
             <div className="mt-4 text-sm text-gray-600">
                 <ul className="m-0">
                     <li className="py-1 flex hover:cursor-auto">
@@ -53,8 +69,28 @@ const Project = async ({ params }: Props) => {
                     </li>
                 </ul>
             </div>
-            <div className="text-sm text-gray-600 mt-10">
-                <PortableText value={project.content} />
+            <div className="my-10">
+                <p className="text-2xl mb-4">Description</p>
+                {project.content4 ? (
+                    <div className="text-sm text-gray-600">
+                        <p>{project.content4}</p>
+                    </div>
+                ) : null}
+                {project.content5 ? (
+                    <div className="text-sm text-gray-600 my-6">
+                        <p>{project.content5}</p>
+                    </div>
+                ) : null}
+                {project.content6 ? (
+                    <div className="text-sm text-gray-600">
+                        <p>{project.content6}</p>
+                    </div>
+                ) : null}
+                {project.content ? (
+                    <div className="text-sm text-gray-600">
+                        <PortableText value={project.content} />
+                    </div>
+                ) : null}
             </div>
         </div>
     );
