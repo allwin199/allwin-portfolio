@@ -21,7 +21,7 @@ export const getProjects = () : Promise<Project[]> => {
             content2,
             content3,
             content
-        } | order(slug asc)`
+        } | order(slug asc)`, { cache: 'no-store' }
     );
 }
 
@@ -47,7 +47,7 @@ export const getProject = (slug: string) : Promise<Project> => {
             content6,
             content
         }`
-        ,{ slug },
+        ,{ slug },{ cache: 'no-store' }
     );
 }
 
