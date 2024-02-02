@@ -21,9 +21,10 @@ export const getProjects = () : Promise<Project[]> => {
             content2,
             content3,
             content
-        } | order(slug asc)`, { cache: 'no-store' }
+        } | order(slug asc)`, 
     );
 }
+// { cache: 'no-store' } -> if caching not required
 
 export const getProject = (slug: string) : Promise<Project> => {
 
@@ -47,7 +48,7 @@ export const getProject = (slug: string) : Promise<Project> => {
             content6,
             content
         }`
-        ,{ slug },{ cache: 'no-store' }
+        ,{ slug }
     );
 }
 
