@@ -47,7 +47,7 @@ export const getProject = (slug: string) : Promise<Project> => {
             content6,
             content
         }`
-        ,{ slug }
+        ,{ slug },
     );
 }
 
@@ -65,6 +65,6 @@ export const getContributions = () : Promise<Contributions[]> => {
             content1,
             content2,
             content3
-        } | order(slug asc)`
+        } | order(slug asc)`,
     )
 }
