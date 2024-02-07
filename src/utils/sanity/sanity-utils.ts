@@ -21,7 +21,7 @@ export const getProjects = () : Promise<Project[]> => {
             content2,
             content3,
             content
-        } | order(slug asc)`, 
+        } | order(slug asc)`, { cache: 'no-store' }
     );
 }
 // { cache: 'no-store' } -> if caching not required
@@ -48,7 +48,7 @@ export const getProject = (slug: string) : Promise<Project> => {
             content6,
             content
         }`
-        ,{ slug }
+        ,{ slug }, { cache: 'no-store' }
     );
 }
 
@@ -66,6 +66,6 @@ export const getContributions = () : Promise<Contributions[]> => {
             content1,
             content2,
             content3
-        } | order(slug asc)`,
+        } | order(slug asc)`,{ cache: 'no-store' }
     )
 }
