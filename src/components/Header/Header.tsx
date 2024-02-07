@@ -31,9 +31,9 @@ export default function Header() {
             <div className="flex justify-between items-center w-full h-full px-8 2xl:px-16">
                 <Link href="../">
                     <Image
-                        src="/logo.png"
+                        src="/logo.svg"
                         alt="logo"
-                        unoptimized={false}
+                        priority={true}
                         width={140}
                         height={140}
                     />
