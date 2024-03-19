@@ -25,7 +25,7 @@ export default function Header() {
     return (
         <header
             className={`fixed w-full h-20 z-[100] ${
-                isScrolling ? "shadow-xl bg-[#ecf0f3]" : ""
+                isScrolling ? "shadow-xl bg-[#ffffff]" : ""
             }`}
         >
             <div className="flex justify-between items-center w-full h-full px-8 2xl:px-16">
