@@ -51,6 +51,7 @@ export const getProject = (slug: string) : Promise<Project> => {
         ,{ slug }, { cache: 'no-store' }
     );
 }
+// { cache: 'no-store' } -> if caching not required
 
 export const getContributions = () : Promise<Contributions[]> => {
 
